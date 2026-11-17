@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>
         <footer className="mx-auto max-w-6xl px-4 pb-10 text-xs text-muted">
-          영화 정보는 TMDB, 책 정보는 카카오 책 검색에서 가져옵니다. 이 서비스는 TMDB와 제휴하거나 TMDB의 인증을 받은 것이 아닙니다.
+          포스터·표지·기본 정보는 Apple, Google Books, Open Library의 공개 검색에서 가져온 것으로, 저작권은 각 권리자에게 있습니다.
         </footer>
       </body>
     </html>

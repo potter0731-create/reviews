@@ -47,7 +47,7 @@ export function AdminApp({ initial }: { initial: Entry[] }) {
     else setHits(json.hits);
   }
 
-  async function pick(h: SearchHit) {
+  function pick(h: SearchHit) {
     setHits([]);
     setDraft((d) =>
       d && {
@@ -59,10 +59,6 @@ export function AdminApp({ initial }: { initial: Entry[] }) {
         poster: h.poster,
       },
     );
-    if (h.kind === "movie") {
-      const res = await fetch(`/api/admin/detail?id=${h.providerId}`);
-      if (res.ok) set("creator", (await res.json()).creator);
-    }
   }
 
   async function save() {
